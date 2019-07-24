@@ -95,7 +95,7 @@ IV_riv_tot_id=[]
 with open(rrr_con_file) as csv_file:
      reader=csv.reader(csv_file,dialect='excel',quoting=csv.QUOTE_NONNUMERIC)
      for row in reader:
-          IV_riv_tot_id.append(int(row[0]))
+          IV_riv_tot_id.append(int(float(row[0])))
 IS_riv_tot=len(IV_riv_tot_id)
 print('- The number of river reaches is: '+str(IS_riv_tot))
 
@@ -111,7 +111,7 @@ ZV_cat_lat=[]
 with open(rrr_cat_file) as csv_file:
      reader=csv.reader(csv_file,dialect='excel',quoting=csv.QUOTE_NONNUMERIC)
      for row in reader:
-          IV_cat_tot_id.append(int(row[0]))
+          IV_cat_tot_id.append(int(float(row[0])))
           ZV_cat_sqkm.append(row[1])
           ZV_cat_lon.append(row[2])
           ZV_cat_lat.append(row[3])

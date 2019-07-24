@@ -114,7 +114,7 @@ IV_riv_tot_id1=[]
 with open(rrr_con_file) as csv_file:
      reader=csv.reader(csv_file,dialect='excel',quoting=csv.QUOTE_NONNUMERIC)
      for row in reader:
-          IV_riv_tot_id1.append(int(row[0]))
+          IV_riv_tot_id1.append(int(float(row[0])))
 IS_riv_tot1=len(IV_riv_tot_id1)
 print('  . The number of river reaches in connectivity file is: '              \
            +str(IS_riv_tot1))
@@ -130,7 +130,7 @@ ZV_lat=[]
 with open(rrr_crd_file) as csv_file:
      reader=csv.reader(csv_file,dialect='excel',quoting=csv.QUOTE_NONNUMERIC)
      for row in reader:
-          IV_riv_tot_id2.append(int(row[0]))
+          IV_riv_tot_id2.append(int(float(row[0])))
           ZV_lon.append(row[1])
           ZV_lat.append(row[2])
 IS_riv_tot2=len(IV_riv_tot_id2)
@@ -190,10 +190,10 @@ IV_riv_j_index=[]
 with open(rrr_cpl_file) as csv_file:
      reader=csv.reader(csv_file,dialect='excel',quoting=csv.QUOTE_NONNUMERIC)
      for row in reader:
-          IV_riv_tot_id3.append(int(row[0]))
+          IV_riv_tot_id3.append(int(float(row[0])))
           ZV_riv_sqkm.append(row[1])
-          IV_riv_i_index.append(int(row[2]))
-          IV_riv_j_index.append(int(row[3]))
+          IV_riv_i_index.append(int(float(row[2])))
+          IV_riv_j_index.append(int(float(row[3])))
 IS_riv_tot3=len(IV_riv_tot_id3)
 print('  . The number of river reaches in coupling file is: '+str(IS_riv_tot3))
 

@@ -106,7 +106,7 @@ IV_riv_tot_id=[]
 with open(rrr_con_file,'rb') as csvfile:
      csvreader=csv.reader(csvfile)
      for row in csvreader:
-          IV_riv_tot_id.append(int(row[0]))
+          IV_riv_tot_id.append(int(float(row[0])))
 IS_riv_tot1=len(IV_riv_tot_id)
 print('- Number of river reaches in rrr_con_file: '+str(IS_riv_tot1))
 
@@ -117,7 +117,7 @@ IV_riv_tot_sort=[]
 with open(rrr_srt_file,'rb') as csvfile:
      csvreader=csv.reader(csvfile)
      for row in csvreader:
-          IV_riv_tot_sort.append(int(row[0]))
+          IV_riv_tot_sort.append(int(float(row[0])))
 IS_riv_tot2=len(IV_riv_tot_sort)
 print('- Number of river reaches in rrr_srt_file: '+str(IS_riv_tot2))
 
