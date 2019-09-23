@@ -307,7 +307,7 @@ with open(rrr_con_file, 'wb') as csvfile:
           IV_line=[int(IV_riv_tot_id[JS_riv_tot]), 
                    int(IV_down[JS_riv_tot]), 
                    int(IV_nbup[JS_riv_tot])] 
-          IV_line=IV_line+IM_up[JS_riv_tot]
+          IV_line=IV_line+[int(x) for x in IM_up[JS_riv_tot]]
           csvwriter.writerow(IV_line) 
 
 with open(rrr_kfc_file, 'wb') as csvfile:
