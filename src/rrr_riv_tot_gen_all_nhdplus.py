@@ -304,9 +304,9 @@ print('Writing files')
 with open(rrr_con_file, 'wb') as csvfile:
      csvwriter = csv.writer(csvfile, dialect='excel')
      for JS_riv_tot in range(IS_riv_tot):
-          IV_line=[IV_riv_tot_id[JS_riv_tot], 
-                   IV_down[JS_riv_tot], 
-                   IV_nbup[JS_riv_tot]] 
+          IV_line=[int(IV_riv_tot_id[JS_riv_tot]), 
+                   int(IV_down[JS_riv_tot]), 
+                   int(IV_nbup[JS_riv_tot])] 
           IV_line=IV_line+IM_up[JS_riv_tot]
           csvwriter.writerow(IV_line) 
 
