@@ -75,7 +75,7 @@ nhd_cat_dbf=dbf.Table(nhd_cat_file)
 nhd_cat_dbf.open()
 
 record=nhd_cat_dbf[0]
-if hasattr(record, b'comid'):
+if hasattr(record,'comid'):
      YS_id_name='comid'
 elif hasattr(record,'featureid'):
      YS_id_name='featureid'
