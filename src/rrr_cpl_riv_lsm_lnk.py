@@ -144,13 +144,15 @@ ZV_lsm_lat=[]
 for JS_lsm_lat in range(IS_lsm_lat):
      #ZV_lsm_lat.append(f.variables['lat'][JS_lsm_lat])
      #Rounding allows reproducing results from ArcGIS and speeds up comparisons:
-     ZV_lsm_lat.append(round(f.variables['lat'][JS_lsm_lat],2))
+     lat_var = f.variables['lat'][JS_lsm_lat].item()
+     ZV_lsm_lat.append(round(lat_var,2))
 
 ZV_lsm_lon=[]
 for JS_lsm_lon in range(IS_lsm_lon):
      #ZV_lsm_lon.append(f.variables['lon'][JS_lsm_lon])
      #Rounding allows reproducing results from ArcGIS and speeds up comparisons:
-     ZV_lsm_lon.append(round(f.variables['lon'][JS_lsm_lon],2))
+     lon_var = f.variables['lon'][JS_lsm_lon].item()
+     ZV_lsm_lon.append(round(lon_var,2))
 
 
 #*******************************************************************************
