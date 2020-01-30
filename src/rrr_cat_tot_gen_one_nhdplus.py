@@ -75,11 +75,19 @@ nhd_cat_dbf=dbf.Table(nhd_cat_file)
 nhd_cat_dbf.open()
 
 record=nhd_cat_dbf[0]
-if hasattr(record,'comid'):
-     YS_id_name='comid'
-elif hasattr(record,'featureid'):
-     YS_id_name='featureid'
-else:
+YS_id_name = ''
+try:
+     comid_attr = record.comid
+     YS_id_name = 'comid'
+except:
+     pass
+if YS_id_name == '':
+     try:
+          featureid_attr = record.featureid
+          YS_id_name = 'featureid'
+     except:
+          pass
+if YS_id_name == '':
      print('ERROR - No attribute named comid or featureid in '+nhd_cat_file)
      raise SystemExit(22) 
 
