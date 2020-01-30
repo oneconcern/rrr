@@ -90,7 +90,7 @@ print('Reading input files')
 #-------------------------------------------------------------------------------
 ZV_kfac=[]
 huc_8_list_k=[]
-with open(rrr_kfc_file,'rb') as csvfile:
+with open(rrr_kfc_file,'r') as csvfile:
      csvreader=csv.reader(csvfile)
      for row in csvreader:
           huc_8_list_k.append(row[0])
@@ -103,7 +103,7 @@ print('- Number of river reaches in rrr_kfc_file: '+str(IS_riv_tot1))
 #-------------------------------------------------------------------------------
 ZV_xfac=[]
 huc_8_list_x=[]
-with open(rrr_xfc_file,'rb') as csvfile:
+with open(rrr_xfc_file,'r') as csvfile:
      csvreader=csv.reader(csvfile)
      for row in csvreader:
           huc_8_list_x.append(row[0])
